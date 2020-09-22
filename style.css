@@ -7,30 +7,29 @@
 body {
   background-image: url("./img/bg-body.png");
   font-family: Arial, Helvetica, sans-serif;
-  width: 100%;
 }
 
 .logo {
-  padding: 20px 0;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .logo img {
+  margin: 15px 0 20px 0;
   border-radius: 50%;
   width: 140px;
-}
-
-.banner img {
-  width: 100%;
-  margin: 10px 0px;
 }
 
 .menu ul {
   text-align: center;
 }
 
-li {
-  list-style: none;
+.menu li a {
+  background-color: rgb(36, 35, 35);
+}
+
+.menu li a:hover {
+  background-color: black;
 }
 
 li a {
@@ -40,15 +39,13 @@ li a {
   text-transform: uppercase;
 }
 
-.menu li a {
-  font-size: 15px;
-  padding: 10px 0;
-  margin: 5px;
-  background-color: rgb(36, 35, 35);
+li {
+  list-style: none;
 }
 
-.menu li a:hover {
-  background-color: black;
+.banner {
+  display: flex;
+  justify-content: center;
 }
 
 .box {
@@ -60,48 +57,40 @@ li a {
 }
 
 .amplia-img {
+  font-size: 12px;
+  line-height: 1.5em;
+  padding: 8px;
   position: absolute;
-  bottom: 415px;
-  width: 100%;
+  font-size: 12px;
   background-color: rgba(0, 0, 0, 0.7);
   text-align: center;
   color: #ffffff;
-  font-size: 14px;
   text-transform: uppercase;
-  line-height: 3em;
   display: block;
   cursor: pointer;
 }
 
-.tag {
-  width: 60px;
-  right: 10px;
-  position: absolute;
-  bottom: auto;
-}
-
 h2 {
-  padding: 15px 10px;
+  padding: 15px 0px;
 }
 
 p {
   font-size: 17px;
-  text-align: left;
-  word-spacing: 2px;
+  text-align: justify;
   line-height: 1.5em;
-  padding: 10px;
-}
-
-button {
-  margin: 30px 10px;
-  padding: 10px 20px;
-  background-color: black;
-  color: aliceblue;
-  font-size: 16px;
+  padding: 0;
 }
 
 a button {
   cursor: pointer;
+}
+
+button {
+  margin: 30px 0;
+  padding: 10px 15px;
+  font-size: 14px;
+  background-color: black;
+  color: aliceblue;
 }
 
 .rodape ul {
@@ -110,14 +99,78 @@ a button {
 }
 
 .rodape li a {
-  font-size: 15px;
-  padding: 10px 0;
-  margin: 5px;
+  border-left: 2px solid #ffffff;
+  padding: 0 10px;
+  margin: 30px 0 15px 0;
+  color: white;
+  font-size: 12px;
   background-color: rgb(241, 6, 6);
 }
 
 .rodape li a:hover {
   background-color: rgb(90, 1, 1);
+}
+
+/* celular*/
+
+@media (min-width: 320px) {
+  .logo {
+    padding: 20px 0;
+  }
+
+  .banner img {
+    width: 100%;
+    margin: 10px 0px;
+  }
+
+  .menu ul {
+    text-align: center;
+  }
+
+  .menu li a {
+    font-size: 15px;
+    padding: 10px 0;
+    margin: 5px;
+  }
+
+  .amplia-img {
+    bottom: 370px;
+    width: 100%;
+    font-size: 12px;
+    line-height: 2em;
+    position: absolute;
+  }
+
+  .tag {
+    width: 60px;
+    right: 10px;
+    position: absolute;
+  }
+
+  h2 {
+    padding: 10px 10px;
+  }
+
+  p {
+    font-size: 17px;
+    text-align: left;
+    word-spacing: 2px;
+    line-height: 1.5em;
+    padding: 10px;
+  }
+
+  button {
+    margin: 15px 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .rodape li a {
+    background-color: rgb(241, 6, 6);
+    font-size: 15px;
+    padding: 10px 0;
+    margin: 5px;
+  }
 }
 
 /*tablet*/
@@ -128,8 +181,8 @@ a button {
   }
 
   .menu li a {
-    margin: 5px;
-    padding: 10px 37px;
+    margin: 12px;
+    padding: 8px 31px;
   }
 
   .banner {
@@ -147,10 +200,6 @@ a button {
     width: 475px;
   }
 
-  .img-1 {
-    width: 100%;
-  }
-
   .amplia-img {
     background-color: rgba(0, 0, 0, 0.7);
     bottom: 375px;
@@ -163,7 +212,6 @@ a button {
   .tag {
     width: 80px;
     right: 20px;
-    bottom: 450px;
     position: absolute;
   }
 
@@ -171,80 +219,49 @@ a button {
     font-size: 18px;
   }
 
-  button {
-    margin: 10px;
-    background-color: black;
-    color: aliceblue;
-    font-size: 15px;
-  }
-
-  .rodape li {
-    font-size: 18px;
+  .rodape li a {
+    padding: 10px 0;
+    margin: 5px;
   }
 }
 
-/* Desktop*/
-
-@media (min-width: 1050px) {
-  .logo img {
-    width: 180px;
-    margin: 15px 0 30px 0;
-  }
-
+@media (min-width: 1200px) {
   .menu li a {
     font-size: 15px;
-    padding: 15px 50px;
-    margin: 10px;
-  }
-
-  .banner {
-    display: flex;
-    justify-content: center;
+    padding: 10px 50px;
+    margin: 12px;
   }
 
   .banner img {
     width: 1184px;
     margin-bottom: 30px;
   }
-
   .pictures {
     margin: 0 60px;
   }
 
   .box {
-    width: 380px;
+    width: 384px;
   }
 
   .amplia-img {
-    bottom: 405px;
-    width: 360px;
+    bottom: 408px;
+    width: 362px;
     font-size: 12px;
     line-height: 1.5em;
     padding: 8px;
   }
 
   .tag {
-    width: 50px;
+    width: 60px;
     right: 20px;
     position: absolute;
     bottom: auto;
   }
 
-  h2 {
-    padding: 15px 0px;
-  }
-
-  p {
-    font-size: 17px;
-    text-align: justify;
-    line-height: 1.5em;
-    padding: 0;
-  }
-
   button {
     margin: 30px 0;
     padding: 10px 15px;
-    font-size: 14px;
   }
 
   .rodape ul {
@@ -254,6 +271,8 @@ a button {
     justify-content: center;
     padding: 30px 0 60px 0;
     margin: 0 75px;
+    color: white;
+    text-align: center;
   }
 
   .rodape li a {
